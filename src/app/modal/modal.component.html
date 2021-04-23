@@ -1,0 +1,19 @@
+<div id="modal" class="va-overlay-close va-modal" role="alertdialog">
+
+    <div class="va-crisis-panel va-modal-inner" style="padding: 12px;" ngxFocusTrap>
+
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <span style="font-size: 1.2em; font-weight: bold;">{{title}}</span>
+            </div>
+            <div>
+                <button class="va-modal-close va-overlay-close" type="button" #closeBtn (keyup.enter)="onModalClose()" (keyup.escape)="onModalClose()" (click)="onModalClose()" role="button" aria-label="Close">
+                    <i class="fas fa-times-circle va-overlay-close" aria-hidden="true"> </i>
+                </button>
+            </div>
+        </div>
+
+        <ng-content></ng-content>
+
+    </div>
+</div>
