@@ -1,0 +1,12 @@
+
+<form #f="ngForm" (ngSubmit) ="save()">
+  <select class="usa-select" [(ngModel)] ="selected"
+  name="valueCheck" (change)="valueChange($event)"> 
+  <option [ngValue]="undefined" disabled>Select Any </option>
+    <option *ngFor="let obj of person" 
+    [ngValue]="obj.rnNo" [selected]="obj.rnNo == selected"> {{obj.name}} </option>
+  </select>
+  <button type="submit" > submit </button>
+  <button (click)="clear()" > clearValue</button>
+  </form>
+  <h3>{{selected}} </h3>
