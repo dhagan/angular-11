@@ -1,12 +1,6 @@
 <p>demo-home works!</p>
 
 
-<h1>hello world</h1>
-<app-demo-comp></app-demo-comp>
-<app-demo-select></app-demo-select>
-<app-demo-login></app-demo-login>
-
-
 <a class="usa-skipnav" href="#main-content">Skip to main content</a>
 
 <div class="usa-overlay"></div>
@@ -144,25 +138,11 @@
 
         <p>Read the full documentation on our side navigation on the component page.</p>
 
+        
         <button type="button" role="button" class="usa-button" (click)="openFeedback()">Demo Modal</button>
+        
+        <app-modal *ngIf="showFeedbackModal" title="Send Feedback" (modalClosed)="closeFeedback()">
 
-        <app-modal class="usa-modal" *ngIf="showFeedbackModal" title="Send Feedback" (modalClosed)="closeFeedback()">
-          <div>
-
-            <p>How would you rate your experience on this page?</p>
-            <app-star-rating [rating]='0' [itemId]='0' (ratingClick)='ratingComponentClick($event)'></app-star-rating>
-
-            <label for="comments">Comments</label>
-            <textarea class="usa-textarea" id="comments" name="comments" rows="3" style="height: auto;"></textarea>
-
-            <br />
-
-            <div style="display: flex; justify-content: center; align-items: center;">
-              <div>
-                <button type="button" role="button" class="usa-button" (click)="closeFeedback()">Submit</button>
-              </div>
-            </div>
-          </div>
         </app-modal>
 
       </main>

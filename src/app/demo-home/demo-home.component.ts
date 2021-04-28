@@ -7,9 +7,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DemoHomeComponent implements OnInit {
 
+  showFeedbackModal = false
+  currentUser = false
+
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
+  setPageToShow(pageToShow: string) {
+    //this.sectionToShow = pageToShow;
+  }
+
+  openFeedback() {
+    this.showFeedbackModal = true;
+  }
+
+  closeFeedback() {
+    this.showFeedbackModal = false;
+  }
+
+  ratingComponentClick(clickObj: any): void {
+    // console.log(`ratingComponentClick:`);
+    // console.dir(clickObj);
+
+  }
 }
